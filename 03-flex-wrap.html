@@ -1,0 +1,84 @@
+<title>flexwrap - fundamentos flex wrap and nowrap</title>
+<style>
+    .flex-container {
+        display: flex;
+        max-width: 300px;
+        height: 150px;
+        border: 2px solid black;
+    }
+
+    .item {
+        font-size: 24px;
+        height: 50%;
+        text-align: center;
+        min-width: 100px;
+        width: 100px;
+        line-height: 50px;
+    }
+
+    .rowrap {
+        flex-wrap: nowrap;
+    }
+
+    .wrap {
+        flex-wrap: wrap; 
+    }
+
+    .wrap-reverse {
+        flex-wrap: wrap-reverse;
+    }
+</style>
+
+<div class="flex-container flex-wrap">
+    <div style="background: red" class="item">1</div>
+    <div style="background: yellow" class="item">2</div>
+    <div style="background: green" class="item">3</div>
+    <div style="background: green" class="item">3</div>
+</div>
+
+<div class="flex-container wrap">
+    <div style="background: red" class="item">1</div>
+    <div style="background: yellow" class="item">2</div>
+    <div style="background: green" class="item">3</div>
+    <div style="background: green" class="item">3</div>
+</div>
+
+<div class="flex-container wrap-reverse">
+    <div style="background: red" class="item">1</div>
+    <div style="background: yellow" class="item">2</div>
+    <div style="background: green" class="item">3</div>
+    <div style="background: green" class="item">3</div>
+</div>
+
+<!-- note
+css
+    .flex-container = df mx-w:300px h150 b:2px+solid+blcka
+    .item = fz24px h50% tac mn-w:100px w100px line-h50px
+    .nowrap = flex-wrap:nowrap
+    .wrap = flex-wrap:wrap
+    .wrap-reverse = flex-wrap: wrap-reverse
+html
+    h2 = wrap
+    div.flex-container
+        div.item'style:bg-red = foo
+        div.item'style:bg-blue= foo
+        div.item'style:bg-green = foo
+
+    h2 = nowrap
+    div.flex-container.nowrap
+        div.item'style:bg-red = foo
+        div.item'style:bg-blue= foo
+        div.item'style:bg-green = foo
+
+    h2 = wrap
+    div.flex-container.wrap
+        div.item'style:bg-red = foo
+        div.item'style:bg-blue= foo
+        div.item'style:bg-green = foo
+
+    h2 = wrap reverse
+    div.flex-container.wrap-reverse
+        div.item'style:bg-red = foo
+        div.item'style:bg-blue= foo
+        div.item'style:bg-green = foo
+-->
