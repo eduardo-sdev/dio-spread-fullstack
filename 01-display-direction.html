@@ -1,0 +1,108 @@
+<title>fundamentos - displat flex direction</title>
+<style>
+    .flex-container {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        list-style: none;
+    }
+
+    .flex-item {
+        background: blue;
+        height: 50px;
+        width: 50px;
+        line-height: 50px;
+        font-size: 20px;
+        color: white;
+        text-align: center;
+        margin: 5px;
+    }
+
+    .row {
+        flex-direction: row;
+    }
+
+    .row-reverse {
+        flex-direction: row-reverse;
+    }
+
+    .row-reverse li{
+        background: red;
+    }
+
+    .column {
+        flex-direction: column;
+        float: flex;
+    }
+
+    .column li{
+        background: orange;
+    }
+
+    .column-reverse {
+        flex-direction: column-reverse;
+        float: right;
+    }
+
+    .column-reverse li{
+        background: purple;
+    }
+</style>
+
+<ul class="flex-container row">
+    <li class="flex-item">foo</li>
+    <li class="flex-item">foo</li>
+</ul>
+
+<ul class="flex-container row-reverse">
+    <li class="flex-item">foo</li>
+    <li class="flex-item">foo</li>
+</ul>
+
+<ul class="flex-container column">
+    <li class="flex-item">foo</li>
+    <li class="flex-item">foo</li>
+</ul>
+
+<ul class="flex-container column-reverse">
+    <li class="flex-item">foo</li>
+    <li class="flex-item">foo</li>
+</ul>
+
+<!-- note 
+
+html
+    title = fundamentos - displat flex direction
+
+    ul.flex-container.row
+        li.flex-item = foo
+        li.flex-item = foo
+
+    ul.flex-container.row-reverse
+        li.flex-item = foo
+        li.flex-item = foo
+
+    ul.flex-container.column
+        li.flex-item = foo
+        li.flex-item = foo
+
+    ul.flex-container.column-reverse
+        li.flex-item = foo
+        li.flex-item = foo
+
+css 
+
+    .flex-container = m0 p0 df lsn
+    .flex-item = bg:blue h50 w50 line-h:50 fz:20px c:white tac m5px
+
+    .row = flex-d:row
+    .row-reverce = flex-d:row-reverse bgc:red 
+    .row-reverce li = bgc:red 
+
+    .column = float:flex flex-d:column
+    .column li= bg:orange
+
+    .column-reverse = float:right flex-d:column-reverse
+    .column-reverse li = puple
+
+-->
