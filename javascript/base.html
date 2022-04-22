@@ -1,0 +1,110 @@
+<title>aula 05 projeto de contador</title>
+
+<style>
+    * {
+        font-family: sans-serif;
+    }
+
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    button {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        border: 2px solid yellow;
+        color: lightcoral;
+        font-size: 16pt;
+        font-weight: 600;
+        text-align: center;
+        cursor: pointer;
+    }
+    button:hover {
+        transform: scale(1.5);
+
+    }
+
+    #counter {
+        display: flex;
+    }
+
+    #currentNumber {
+        display: flex;
+        align-items: center;
+        margin: 0 20px;
+        font-size: 16pt;
+    }
+</style>
+
+<h1>Olá mundo</h1>
+<p>projeto em javascript</p>
+
+<div id="counter">
+    <button id="decrement">-</button>
+    <span id="currentNumber">0</span>
+    <button id="increment">+</button>
+</div>
+<script>
+
+const currentNumbeWrapper = document.querySelector('#currentNumber')
+const add = document.querySelector('#increment')
+const remove = document.querySelector('#decrement')
+
+let currentNumber = 0
+
+add.addEventListener('click', () => {
+    if(currentNumber <= 9){
+        currentNumber++
+
+        currentNumbeWrapper.innerHTML = currentNumber
+        if(currentNumber > 0){
+            currentNumbeWrapper.style.color = 'green'
+        }
+    }
+})
+
+remove.addEventListener('click', () => {
+    currentNumber--
+
+    currentNumbeWrapper.innerHTML = currentNumber
+    if(currentNumber < 0){
+        currentNumbeWrapper.style.color = 'red'
+    }
+
+})
+
+</script>
+
+<!-- notes 
+html
+    h1 = olá mundo
+    p = projeto em javacript
+    div#counter
+        button+name:remove#decrement = -
+        span+currentNumber = 0
+        button+name:add#increment = +
+js
+    c currentNumberWrapper=#currentNumber add=#increment remove=#increment
+    l currentNumber=0
+
+    add evnetclick
+        if currentNumber <= 10
+            currentNumber++
+
+            currentNumberWrapper.innerHTML=curentNumber
+            if currentNumber < 0
+                currentNumberWrapper.style.color='green'
+
+    remove evnetclick
+        if currentNumber < 0
+            currentNumber--
+
+            currentNumberWrapper.innerHTML=curentNumber
+            if currentNumber > 0
+                currentNumberWrapper.style.color='red'
+
+-->
