@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>align self</title>
+
+    <style>
+        .flex-container{
+            max-width: 350px;
+            border: 1px solid black;
+            margin-bottom: 10px;
+            display: flex;
+        }
+
+        .align-container {
+            align-items: flex-end;
+        }
+
+        .item {
+            background-color: cornflowerblue;
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            margin: 5px;
+        }
+
+        .center {
+            align-self: center;
+        }
+
+        .start {
+            align-self: flex-start;
+        }
+
+        .end {
+            align-self: flex-end;
+        }
+
+        .baseline {
+            align-self: baseline;
+        }
+
+        .stretch {
+            align-self: stretch;
+        }
+
+        .auto {
+            align-self: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="flex-container align-container">
+        <div class="item auto">test</div>
+        <div class="item auto">test111</div>
+        <div class="item auto">ttes2test2t es2test2tes2te st2tes2te st2es2test2</div>
+        <div class="item auto">tesfoo</div>
+        <div class="item auto">testtest</div>
+    </section>
+
+    <section class="flex-container">
+        <div class="item center">test</div>
+        <div class="item start">test111</div>
+        <div class="item auto">ttes2test2t es2test2tes2te st2tes2te st2es2test2</div>
+        <div class="item end">tesfoo</div>
+        <div class="item auto">testtest</div>
+    </section>
+
+    <section class="flex-container">
+        <div class="item end">test</div>
+        <div class="item start">test111</div>
+        <div class="item auto">ttes2test2t es2test2tes2te st2tes2te st2es2test2</div>
+        <div class="item start">tesfoo</div>
+        <div class="item auto">testtest</div>
+    </section>
+</body>
+</html>
