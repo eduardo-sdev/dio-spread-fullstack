@@ -15,3 +15,8 @@ if(fistname === 'eduardo') {
 
 console.log(fistname, lastname);
 
+const FIRST_NAME = 'eduardo'
+
+// const FIRST_NAME = 'silva'
+// FIRST_NAME = 'eduardo'
+
