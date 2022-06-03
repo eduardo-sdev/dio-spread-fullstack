@@ -1,6 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
+import {Btn} from './comp/Btn'
+
 function Sum(a, b) {
     return a + b
 }
@@ -19,6 +21,7 @@ const App = () => {
     return (
         <>
             {First()}
+            <Btn title={'button'} onClick={() => alert('button onclick')}/>
         </>
     )
 }
